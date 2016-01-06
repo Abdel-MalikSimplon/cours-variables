@@ -1,0 +1,835 @@
+<!doctype html>
+<html lang="fr">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Les variables – SimplonMars, Ecole Centrale Marseille</title>
+
+		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+		<meta name="author" content="Hakim El Hattab">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/league.css" id="theme">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<h1>Les Variables</h1>
+					<h3>Un monde passionnant et parfois complèxe</h3>
+					<p>
+						<small>Pour <a href="http://hakim.se">SimplonMars</a> / <a href="http://twitter.com/hakimel">Ecole Centrale Marseille</a></small>
+					</p>
+				</section>
+
+				<section>
+					<h2>Une variable c'est quoi ? </h2>
+					<img data-src="img/boite-variable-une.png" style="background-color: transparent; border: none; box-shadow: none;" />
+				</section>
+				<section>
+					<h2>On peut tout mettre, t'es sur ? </h2>
+					<img data-src="img/giphy.gif" />
+				</section>
+				<section>
+					<section>
+					<h2>Comment définir le nom d'une variable ?</h2>
+					<p>La création d'une variable passe par 4 phases :</p>
+						<ol style="margin: auto;">
+							<li class="fragment">Créer et mémoriser un nom de variable</li>
+							<li class="fragment">Lui attribué un type</li>
+							<li class="fragment">Créer et mémorisé une valeur</li>
+							<li class="fragment">Etablir un lien entre le nom de la variable et l'emplacement mémoire</li>
+						</ol>
+					</section>
+				</section>
+
+				<section>
+					<h2>Espace de nom</h2>
+					<p>Lorsque nous créons une variable, nous réservons un emplacement mémoire dans l'ordinateur.</p>
+						<img data-src="img/tiroir.png" />
+				</section>
+				<section>
+					<section>
+					<h2>Création d'une variable (référence)</h2>
+					<p>Pour créer une variable, il faut lui donner un nom. Cette étape s'appelle la "Déclaration de variable".</p>
+						<img data-src="img/boite-variable-etiquette.png" />
+					</section>
+					<section>
+						<img data-src="img/creation-variable.jpg" />
+					</section>
+				</section>
+				<section>
+					<h2>Lui attribué un type</h2>
+					<p>Le type de la variable dépend de son contenu.</p>
+						<img data-src="img/type.jpg" />
+				</section>
+				<section>
+					<h2>Créer et mémorisé une valeur</h2>
+						<img data-src="img/valeur-variable.jpg" />
+				</section>
+				<section>
+					<h2>Etablir un lien entre nom et valeur</h2>
+						<img data-src="img/espace-de-nom.jpg" width="500px" />
+				</section>
+				<section>
+					<section>
+						<h2>Création de variable dans d'autre langage</h2>
+						<p>En JAVA</p>
+						<pre style="background:#000;color:#f8f8f8"><span style="color:#99cf50">float</span> pi = <span style="color:#3387cc">3.141f</span>;
+	</pre>
+						<p>En C++</p>
+						<pre style="background:#000;color:#f8f8f8"><span style="color:#8996a8">#<span style="color:#afc4db">include</span> <span style="color:#65b042">&lt;iostream></span></span>
+	<span style="color:#e28964">using</span> <span style="color:#99cf50">namespace</span> <span style="text-decoration:underline">std</span>;
+
+	<span style="color:#99cf50">int</span> <span style="color:#89bdff">main</span>() {
+
+	    int <span style="color:#3e87e3">ageUtilisateur</span>(16);
+
+	    return 0;
+
+	}
+	</pre>
+					</section>
+					<section>
+						<h2>Hello World !</h2>
+						<p>En JAVA</p>
+						<pre style="background:#000;color:#f8f8f8"><span style="color:#aeaeae;font-style:italic">/* Affichage console */</span>
+<span style="color:#99cf50">public</span> <span style="color:#99cf50">class</span> <span style="text-decoration:underline">HelloWorld</span> {
+    <span style="color:#99cf50">public</span> <span style="color:#99cf50">static</span> <span style="color:#99cf50">void</span> <span style="color:#89bdff">main</span>(<span style="color:#99cf50">String</span>[] <span style="color:#3e87e3">args</span>) {
+        <span style="color:#99cf50">System</span><span style="color:#e28964">.</span>out<span style="color:#e28964">.</span>println(<span style="color:#65b042">"Hello world!"</span>);
+    }
+}
+</pre>
+						<p>En JavaScript</p>
+						<pre style="background:#000;color:#f8f8f8"><span style="color:#dad085">alert</span>(<span style="color:#65b042">"Hello world!"</span>);
+</pre>
+					</section>
+				</section>
+				<section>
+				<h2>Règle de nommage</h2>
+					<ol style="margin: auto;">
+						<li class="fragment">Un nom de variable est une séquence de lettres (a -> z ; A -> Z) et de chiffre (0 -> 9). </li>
+						<li class="fragment">Le nom de la variable doit toujours commencer par une lettre minuscule.</li>
+						<li class="fragment">Les lettres accentuées, les cédilles, les espaces, les caractères spéciaux, sont interdits (exception pour le _underscore).</li>
+					</ol>
+				</section>
+				<section>
+				<h2>Convention de nommage</h2>
+				<p>Il existe des conventions de nommage pour les variables. Deux d'entres-elles sont les plus connus et les plus utilisées.</p>
+					<ol style="margin: auto;">
+						<li class="fragment">La première est le camelCase (casse de chameau)</li>
+						<li class="fragment">_Underscore. </li>
+					</ol>
+				</section>
+				<section>
+				<h2>La casse</h2>
+				<p>Les noms de variables sont sensibles à la casse.</p>
+					<ol style="margin: auto;">
+						<li class="fragment">Age</li>
+						<li class="fragment">aGe</li>
+						<li class="fragment">AGE</li>
+						<p class="fragment">Sont toutes des variables différentes !</p>
+					</ol>
+				</section>
+				<section>
+				<h2>La casse</h2>
+					<img data-src="img/la-casse.jpg" />
+				</section>
+				<section>
+				<h2>Choisissez un nom de variable explicite !</h2>
+				<p>Ne négligez pas le choix du nom de votre variable, c'est très important.</p>
+				<pre style="background:#000;color:#f8f8f8"><span style="color:#99cf50">var</span> nom; <span style="color:#aeaeae;font-style:italic">// C'est un bon nom de variable</span>
+
+<span style="color:#99cf50">var</span> x; <span style="color:#aeaeae;font-style:italic">// A évité !!</span>
+</pre>
+				</section>
+				<section>
+					<h2>Affectation multiple</h2>
+					<p>Une des grandes force des langage de programmation, c'est qu'il est possible d'affecté des valeurs à plusieurs variables en même temps</p>
+					<pre style="background:#000;color:#f8f8f8"><span style="color:#99cf50">var</span> voiture <span style="color:#e28964">=</span> <span style="color:#65b042">"Ford"</span>,
+    annee <span style="color:#e28964">=</span> <span style="color:#3387cc">1969</span>,
+    permis <span style="color:#e28964">=</span> <span style="color:#65b042">"non"</span>;
+</pre>
+				</section>
+				<section>
+					<section>
+						<h2>Les noms de variable réservés</h2>
+						<p>Il existe des mots réservés, déjà utiliser par le langage, tachez de ne pas les utiliser.<br /><span><small>Par exemple:</small></span></p>
+						<pre style="background:#000;color:#f8f8f8"><span style="color:#dad085">alert</span>() <span style="color:#aeaeae;font-style:italic">// affiche une boite de dialogue à l'écran. </span>
+
+Exemple : <span style="color:#dad085">alert</span>(<span style="color:#65b042">"Bonjour SimplonMars !"</span>);
+
+<span style="color:#aeaeae;font-style:italic">// affiche Bonjour Simplon Mars !</span>
+						</pre>
+					</section>
+
+					<section>
+						<h2>Démonstration</h2>
+						<img data-src="img/img-alert.gif" alt="image alert()" />
+					</section>
+
+					<section>
+						<p>Si maintenant je fais ceci :</p>
+						<pre style="background:#000;color:#f8f8f8">alert <span style="color:#e28964">=</span> <span style="color:#65b042">"lol"</span>;
+
+<span style="color:#aeaeae;font-style:italic">// et que je fais : </span>
+
+<span style="color:#dad085">alert</span>(<span style="color:#65b042">"Une autre boite de dialogue"</span>);
+
+<span style="color:#aeaeae;font-style:italic">// J'aurai un message d'erreur. </span>
+</pre>
+					</section>
+
+					<section>
+						<h2>Démonstration</h2>
+						<img data-src="img/alert-var-alert.gif" alt="image alert()" />
+					</section>
+
+				</section>
+				<section>
+					<h2>Attribué une valeur à la variable</h2>
+					<p>Pour rester dans l'analogie de la boite, on va devoir remplir la boite. Cette étape s'appelle l'affectation. </p>
+					<img data-src="img/boite-variable-deux.png" alt="seconde boite de variable" style="background-color: transparent; border: none; box-shadow: none"/>
+				</section>
+				<section>
+					<section>
+						<h2>Comment affecter une valeur à une variable ?</h2>
+						<p>Lorsque nous affectons une valeur à une variable, celle-ci aura ce qu'on appel un type. Le typage dépendra de son contenu.</p>
+					</section>
+					<section>
+						<p>Il existe plusieurs types :</p>
+						<ul>
+							<li>Le type numérique &rarr; stockage de nombre (0, 9, 3.5) </li>
+							<pre style="background:#000;color:#f8f8f8"><span style="color:#99cf50">var</span> nombre <span style="color:#e28964">=</span> <span style="color:#3387cc">12</span>;
+<span style="color:#99cf50">var</span> nombreFlottant <span style="color:#e28964">=</span> <span style="color:#3387cc">3.141</span>;
+</pre>
+							<li>Le type alphanumérique &rarr; chaine de caractère (lettre, signe de ponctuation, espace, chiffre)</li>
+							<pre style="background:#000;color:#f8f8f8"><span style="color:#99cf50">var</span> chaine <span style="color:#e28964">=</span> <span style="color:#65b042">"Quand on est vivant on répond au téléphone !"</span>
+</pre>
+							<li>Le type booléen &rarr; vrai - faux ; 0 - 1</li>
+							<pre style="background:#000;color:#f8f8f8"><span style="color:#99cf50">var</span> ferie <span style="color:#e28964">=</span> <span style="color:#3387cc">true</span>;
+<span style="color:#99cf50">var</span> ecole <span style="color:#e28964">=</span> <span style="color:#3387cc">false</span>;
+</pre>
+						</ul>
+					</section>
+					<section>
+						<p>Suivant le type de variable, on pourra faire certaines opérations.</p>
+						<pre style="background:#000;color:#f8f8f8"><span style="color:#aeaeae;font-style:italic">// Par exemple, avec une variable de type numérique nous pouvons faire </span>
+<span style="color:#99cf50">var</span> resultat <span style="color:#e28964">=</span> <span style="color:#3387cc">3</span> <span style="color:#e28964">+</span> <span style="color:#3387cc">2</span>
+<span style="color:#aeaeae;font-style:italic">// ce qui donnera 5. </span>
+</pre>
+					</section>
+					<section>
+						<p>Concaténation avec le symbole +</p>
+						<pre style="background:#000;color:#f8f8f8"><span style="color:#99cf50">var</span> loulou <span style="color:#e28964">=</span> <span style="color:#65b042">"Loulou' et 'Boutin (bando) Loulou' et 'Boutin"</span>
+<span style="color:#99cf50">var</span> coco <span style="color:#e28964">=</span> <span style="color:#65b042">"Coco na Chanel (Coco) Coco na Chanel (Coco Chanel)"</span>
+
+<span style="color:#99cf50">var</span> complet <span style="color:#e28964">=</span> loulou <span style="color:#e28964">+</span> <span style="color:#65b042">" "</span> <span style="color:#e28964">+</span> coco
+</pre>
+					</section>
+
+					<section>
+						<h2>Démonstration</h2>
+						<img data-src="img/loulou-boutin.gif" alt="Maitre Gims" />
+					</section>
+
+				</section>
+				<section>
+					<section>
+					<h2>Type de variable complexe</h2>
+					<p>Une variable peut contenir des types de données complexe tel que des fonctions ou des tableaux.</p>
+					<pre style="background:#000;color:#f8f8f8"><span style="color:#aeaeae;font-style:italic">// Par exemple</span>
+
+<span style="color:#99cf50">var</span> <span style="color:#89bdff">maFonction</span> <span style="color:#e28964">=</span> <span style="color:#99cf50">function</span>(){
+    <span style="color:#aeaeae;font-style:italic">// Faire quelque chose</span>
+}
+
+<span style="color:#99cf50">var</span> monTableau <span style="color:#e28964">=</span> [ ];
+</pre>
+</section>
+					<section>
+						<pre style="background:#000;color:#f8f8f8"><span style="color:#aeaeae;font-style:italic">// On créer une variable btn qui va contenir l'ID #btn</span>
+<span style="color:#aeaeae;font-style:italic">// De cette façon on économisera du code</span>
+
+<span style="color:#99cf50">var</span> btn <span style="color:#e28964">=</span> <span style="color:#9b859d">document</span>.<span style="color:#dad085">getElementById</span>(<span style="color:#65b042">'#btn'</span>);
+    btn.addEventListener(<span style="color:#65b042">'click'</span>, <span style="color:#99cf50">function</span>(){
+        <span style="color:#dad085">alert</span>(<span style="color:#65b042">'Tu as cliqué avec JavaScript !'</span>);
+    })
+
+<span style="color:#aeaeae;font-style:italic">// La même chose avec jQuery
+// noté qu'ici il n'y a pas besoin de variable</span>
+    <span style="color:#e28964">$</span>(<span style="color:#65b042">'#btn'</span>).on(<span style="color:#65b042">'click'</span>, <span style="color:#99cf50">function</span>(){
+        <span style="color:#dad085">alert</span>(<span style="color:#65b042">'Tu as cliqué avec jQuery !'</span>)
+    })
+</pre>
+					</section>
+				</section>
+				<section>
+					<h2>Confondre nom de variable et contenu</h2>
+					<p>Une erreur qui arrive fréquemment lorsque l'on débute, c'est de confondre le nom de la variable et son contenue. </p>
+					<pre style="background:#000;color:#f8f8f8"><span style="color:#99cf50">var</span> boite <span style="color:#e28964">=</span> contenu;
+
+<span style="color:#99cf50">var</span> nom &larr; <span style="color:#65b042">"Simplon"</span>;
+</pre>
+				<p><small>Le signe = en programmation n'est pas un signe d'égalité comme en mathématique, mais un signe d'affectation.</small></p>
+				</section>
+				<section>
+					<section>
+						<h2>Opérateur et Opérande</h2>
+					</section>
+					<section>
+						<h2>Opérateur et Opérande</h2>
+						<ul style="margin: auto;">
+							<li class="fragment">Opérateurs d'affectation</li>
+							<li class="fragment">Opérateurs de comparaison</li>
+							<li class="fragment">Opérateurs arithmétiques</li>
+							<li class="fragment">Opérateurs binaires</li>
+							<li class="fragment">Opérateurs logiques</li>
+							<li class="fragment">Opérateurs de chaînes de caractères</li>
+							<li class="fragment">Opérateur conditionnel ternaire</li>
+							<li class="fragment">La virgule comme opérateur</li>
+							<li class="fragment">Opérateurs unaires</li>
+							<li class="fragment">Opérateurs relationnels</li>
+						</ul>
+					</section>
+					<section>
+						<h2>Opérateurs d'affectation</h2>
+					</section>
+					<section>
+						<p>Affectation</p>
+						<pre style="background:#000;color:#f8f8f8">x <span style="color:#e28964">=</span> y
+a <span style="color:#e28964">=</span> <span style="color:#3387cc">2</span>
+</pre>
+					</section>
+					<section>
+						<p>Affectation après addition</p>
+						<pre style="background:#000;color:#f8f8f8">x <span style="color:#e28964">+</span><span style="color:#e28964">=</span> y
+x  <span style="color:#e28964">=</span> x <span style="color:#e28964">+</span> y
+
+a <span style="color:#e28964">+</span><span style="color:#e28964">=</span> <span style="color:#3387cc">1</span>
+a <span style="color:#e28964">=</span> a <span style="color:#e28964">+</span> <span style="color:#3387cc">1</span>
+</pre>
+					</section>
+					<section>
+						<p>Affectation après soustraction</p>
+						<pre style="background:#000;color:#f8f8f8">x <span style="color:#e28964">-</span><span style="color:#e28964">=</span> y
+x  <span style="color:#e28964">=</span> x <span style="color:#e28964">-</span> y
+
+a <span style="color:#e28964">-</span><span style="color:#e28964">=</span> <span style="color:#3387cc">1</span>
+a <span style="color:#e28964">=</span> a <span style="color:#e28964">-</span> <span style="color:#3387cc">1</span>
+</pre>
+					</section>
+					<section>
+						<p>Affectation après multiplication</p>
+						<pre style="background:#000;color:#f8f8f8">x <span style="color:#e28964">*</span><span style="color:#e28964">=</span> y
+x  <span style="color:#e28964">=</span> x <span style="color:#e28964">*</span> y
+
+a <span style="color:#e28964">*</span><span style="color:#e28964">=</span> <span style="color:#3387cc">2</span>
+a <span style="color:#e28964">=</span> a <span style="color:#e28964">*</span> <span style="color:#3387cc">2</span>
+</pre>
+					</section>
+					<section>
+						<p>Affectation après division</p>
+						<pre style="background:#000;color:#f8f8f8">x <span style="color:#e28964">/=</span> y
+x  <span style="color:#e28964">=</span> x / y
+
+a <span style="color:#e28964">/=</span> <span style="color:#3387cc">2</span>
+a <span style="color:#e28964">=</span> a / <span style="color:#3387cc">2</span>
+</pre>
+					</section>
+					<section>
+						<p>Affectation du reste</p>
+						<pre style="background:#000;color:#f8f8f8">x <span style="color:#e28964">%</span><span style="color:#e28964">=</span> y
+x  <span style="color:#e28964">=</span> x <span style="color:#e28964">%</span> y
+
+a <span style="color:#e28964">%</span><span style="color:#e28964">=</span> <span style="color:#3387cc">5</span>
+a <span style="color:#e28964">=</span> a <span style="color:#e28964">%</span> <span style="color:#3387cc">5</span>
+</pre>
+					</section>
+					<section>
+						<p>Affectation après exponentiation</p>
+						<pre style="background:#000;color:#f8f8f8">x <span style="color:#e28964">*</span><span style="color:#e28964">*</span><span style="color:#e28964">=</span> y
+x  <span style="color:#e28964">=</span> x <span style="color:#e28964">*</span><span style="color:#e28964">*</span> y
+
+a <span style="color:#e28964">*</span><span style="color:#e28964">*</span><span style="color:#e28964">=</span> <span style="color:#3387cc">2</span>
+a <span style="color:#e28964">=</span> a <span style="color:#e28964">*</span><span style="color:#e28964">*</span><span style="color:#3387cc">2</span>
+</pre>
+					</section>
+					<section>
+						<h2>Opérateurs de comparaison</h2>
+					</section>
+					<section>
+						<h2>Les opérateurs d'égalité</h2>
+						<p>Égalité simple (==)</p>
+						<pre style="background:#000;color:#f8f8f8">x <span style="color:#e28964">==</span> y
+
+ <span style="color:#3387cc">1</span>   <span style="color:#e28964">==</span>  <span style="color:#3387cc">1</span>;        <span style="color:#aeaeae;font-style:italic">// true</span>
+<span style="color:#65b042">"1"</span>  <span style="color:#e28964">==</span>  <span style="color:#3387cc">1</span>;        <span style="color:#aeaeae;font-style:italic">// true</span>
+ <span style="color:#3387cc">1</span>   <span style="color:#e28964">==</span> <span style="color:#65b042">'1'</span>;       <span style="color:#aeaeae;font-style:italic">// true</span>
+ <span style="color:#3387cc">0</span>   <span style="color:#e28964">==</span> <span style="color:#3387cc">false</span>;     <span style="color:#aeaeae;font-style:italic">// true</span>
+ <span style="color:#3387cc">0</span>   <span style="color:#e28964">==</span> <span style="color:#3387cc">null</span>;      <span style="color:#aeaeae;font-style:italic">// false</span>
+ <span style="color:#3387cc">0</span>   <span style="color:#e28964">==</span> <span style="color:#3387cc">undefined</span>  <span style="color:#aeaeae;font-style:italic">// false</span>
+ <span style="color:#3387cc">null</span> <span style="color:#e28964">==</span> <span style="color:#3387cc">undefined</span> <span style="color:#aeaeae;font-style:italic">// true</span>
+</pre>
+					</section>
+					<section>
+						<p>Inégalité simple (!=)</p>
+						<pre style="background:#000;color:#f8f8f8">x <span style="color:#e28964">!</span><span style="color:#e28964">=</span> y
+
+<span style="color:#3387cc">1</span> <span style="color:#e28964">!</span><span style="color:#e28964">=</span>   <span style="color:#3387cc">2</span>;     <span style="color:#aeaeae;font-style:italic">// true</span>
+<span style="color:#3387cc">1</span> <span style="color:#e28964">!</span><span style="color:#e28964">=</span>  <span style="color:#65b042">"1"</span>;    <span style="color:#aeaeae;font-style:italic">// false</span>
+<span style="color:#3387cc">1</span> <span style="color:#e28964">!</span><span style="color:#e28964">=</span>  <span style="color:#65b042">'1'</span>;   <span style="color:#aeaeae;font-style:italic">// false</span>
+<span style="color:#3387cc">1</span> <span style="color:#e28964">!</span><span style="color:#e28964">=</span>  <span style="color:#3387cc">true</span>;   <span style="color:#aeaeae;font-style:italic">// false</span>
+<span style="color:#3387cc">0</span> <span style="color:#e28964">!</span><span style="color:#e28964">=</span>  <span style="color:#3387cc">false</span>;  <span style="color:#aeaeae;font-style:italic">// false</span>
+</pre>
+					</section>
+					<section>
+						<p>Égalité stricte (===)</p>
+						<pre style="background:#000;color:#f8f8f8">x <span style="color:#e28964">===</span> y
+
+<span style="color:#3387cc">3</span> <span style="color:#e28964">===</span> <span style="color:#3387cc">3</span>   <span style="color:#aeaeae;font-style:italic">// true</span>
+<span style="color:#3387cc">3</span> <span style="color:#e28964">===</span> <span style="color:#65b042">'3'</span> <span style="color:#aeaeae;font-style:italic">// false</span>
+</pre>
+					</section>
+					<section>
+						<p>Inégalité stricte (!==)</p>
+						<pre style="background:#000;color:#f8f8f8">x <span style="color:#e28964">!</span><span style="color:#e28964">==</span> y
+
+<span style="color:#3387cc">3</span> <span style="color:#e28964">!</span><span style="color:#e28964">==</span> <span style="color:#65b042">'3'</span> <span style="color:#aeaeae;font-style:italic">// true</span>
+<span style="color:#3387cc">4</span> <span style="color:#e28964">!</span><span style="color:#e28964">==</span> <span style="color:#3387cc">3</span>   <span style="color:#aeaeae;font-style:italic">// true</span>
+</pre>
+					</section>
+					<section>
+						<h2>Opérateurs relationnels</h2>
+					</section>
+					<section>
+						<h2>Opérateurs relationnels</h2>
+						<p>Supérieur strict (>)</p>
+						<pre style="background:#000;color:#f8f8f8">x <span style="color:#e28964">></span> y
+
+<span style="color:#3387cc">4</span> <span style="color:#e28964">></span> <span style="color:#3387cc">3</span>; <span style="color:#aeaeae;font-style:italic">// true</span>
+</pre>
+					</section>
+					<section>
+						<p>Supérieur ou égal (>=)</p>
+						<pre style="background:#000;color:#f8f8f8">x <span style="color:#e28964">>=</span> y
+
+<span style="color:#3387cc">4</span> <span style="color:#e28964">>=</span> <span style="color:#3387cc">3</span>; <span style="color:#aeaeae;font-style:italic">// true</span>
+<span style="color:#3387cc">3</span> <span style="color:#e28964">>=</span> <span style="color:#3387cc">3</span>; <span style="color:#aeaeae;font-style:italic">// true</span>
+</pre>
+					</section>
+					<section>
+						<p>Inférieur strict (<)</p>
+						<pre style="background:#000;color:#f8f8f8">x <span style="color:#e28964">&lt;</span> y
+
+<span style="color:#3387cc">3</span> <span style="color:#e28964">&lt;</span> <span style="color:#3387cc">4</span>; <span style="color:#aeaeae;font-style:italic">// true</span>
+</pre>
+					</section>
+					<section>
+						<p>Inférieur ou égal (<=)</p>
+						<pre style="background:#000;color:#f8f8f8">x <span style="color:#e28964">&lt;=</span> y
+
+<span style="color:#3387cc">3</span> <span style="color:#e28964">&lt;=</span> <span style="color:#3387cc">4</span>; <span style="color:#aeaeae;font-style:italic">// true</span>
+</pre>
+					</section>
+					<section>
+						<h2>Opérateurs arithmétiques</h2>
+					</section>
+					<section>
+						<h2>Opérateurs arithmétiques</h2>
+						<p>Addition (+)</p>
+						<pre style="background:#000;color:#f8f8f8">x <span style="color:#e28964">+</span> y
+
+concaténation
+<span style="color:#65b042">"toto"</span> <span style="color:#e28964">+</span> <span style="color:#3387cc">false</span> <span style="color:#aeaeae;font-style:italic">// "totofalse"</span>
+
+<span style="color:#aeaeae;font-style:italic">// chaîne de caractères + chaîne de caractères -> concaténation</span>
+<span style="color:#65b042">"toto"</span> <span style="color:#e28964">+</span> <span style="color:#65b042">"truc"</span> <span style="color:#aeaeae;font-style:italic">// "tototruc"</span>
+</pre>
+					</section>
+					<section>
+						<p>Soustraction (-)</p>
+						<pre style="background:#000;color:#f8f8f8">x <span style="color:#e28964">-</span> y
+
+<span style="color:#3387cc">5</span> <span style="color:#e28964">-</span> <span style="color:#3387cc">3</span> <span style="color:#aeaeae;font-style:italic">// 2</span>
+<span style="color:#3387cc">3</span> <span style="color:#e28964">-</span> <span style="color:#3387cc">5</span> <span style="color:#aeaeae;font-style:italic">// -2</span>
+<span style="color:#65b042">"toto"</span> <span style="color:#e28964">-</span> <span style="color:#3387cc">3</span> <span style="color:#aeaeae;font-style:italic">// NaN</span>
+</pre>
+					</section>
+					<section>
+						<p>Division (/)</p>
+						<pre style="background:#000;color:#f8f8f8">Opérateur : x / y
+
+<span style="color:#3387cc">1</span> / <span style="color:#3387cc">2</span>      <span style="color:#aeaeae;font-style:italic">// renvoie 0.5 en JavaScript</span>
+<span style="color:#3387cc">1</span> / <span style="color:#3387cc">2</span>      <span style="color:#aeaeae;font-style:italic">// renvoie 0 en Java </span>
+<span style="color:#aeaeae;font-style:italic">// (aucun des deux opérandes n'est un nombre flottant de façon explicite)</span>
+
+<span style="color:#3387cc">1.0</span> / <span style="color:#3387cc">2.0</span>  <span style="color:#aeaeae;font-style:italic">// renvoie 0.5 en JavaScript et Java</span>
+
+<span style="color:#3387cc">2.0</span> / <span style="color:#3387cc">0</span>    <span style="color:#aeaeae;font-style:italic">// renvoie Infinity (pour l'infini) en JavaScript</span>
+<span style="color:#3387cc">2.0</span> / <span style="color:#3387cc">0.0</span>  <span style="color:#aeaeae;font-style:italic">// renvoie Infinity également</span>
+<span style="color:#3387cc">2.0</span> / <span style="color:#e28964">-</span><span style="color:#3387cc">0.0</span> <span style="color:#aeaeae;font-style:italic">// renvoie -Infinity en JavaScript</span>
+</pre>
+					</section>
+					<section>
+						<p>Multiplication (*)</p>
+						<pre style="background:#000;color:#f8f8f8">x <span style="color:#e28964">*</span> y
+
+<span style="color:#3387cc">2</span> <span style="color:#e28964">*</span> <span style="color:#3387cc">2</span> <span style="color:#aeaeae;font-style:italic">// 4</span>
+<span style="color:#e28964">-</span><span style="color:#3387cc">2</span> <span style="color:#e28964">*</span> <span style="color:#3387cc">2</span> <span style="color:#aeaeae;font-style:italic">// -4</span>
+<span style="color:#3387cc">Infinity</span> <span style="color:#e28964">*</span> <span style="color:#3387cc">0</span> <span style="color:#aeaeae;font-style:italic">// NaN</span>
+<span style="color:#3387cc">Infinity</span> <span style="color:#e28964">*</span> <span style="color:#3387cc">Infinity</span> <span style="color:#aeaeae;font-style:italic">// Infinity</span>
+<span style="color:#65b042">"toto"</span> <span style="color:#e28964">*</span> <span style="color:#3387cc">2</span> <span style="color:#aeaeae;font-style:italic">// NaN</span>
+</pre>
+					</section>
+					<section>
+						<p>Reste (%)</p>
+						<pre style="background:#000;color:#f8f8f8">var1 <span style="color:#e28964">%</span> var2
+
+<span style="color:#3387cc">12</span> <span style="color:#e28964">%</span> <span style="color:#3387cc">5</span>  <span style="color:#aeaeae;font-style:italic">// 2</span>
+<span style="color:#e28964">-</span><span style="color:#3387cc">1</span> <span style="color:#e28964">%</span> <span style="color:#3387cc">2</span>  <span style="color:#aeaeae;font-style:italic">// -1</span>
+<span style="color:#3387cc">NaN</span> <span style="color:#e28964">%</span> <span style="color:#3387cc">2</span> <span style="color:#aeaeae;font-style:italic">// NaN</span>
+<span style="color:#3387cc">1</span> <span style="color:#e28964">%</span> <span style="color:#3387cc">2</span>   <span style="color:#aeaeae;font-style:italic">// 1</span>
+<span style="color:#3387cc">2</span> <span style="color:#e28964">%</span> <span style="color:#3387cc">3</span>   <span style="color:#aeaeae;font-style:italic">// 2</span>
+<span style="color:#e28964">-</span><span style="color:#3387cc">4</span> <span style="color:#e28964">%</span> <span style="color:#3387cc">2</span>  <span style="color:#aeaeae;font-style:italic">// -0</span>
+<span style="color:#3387cc">5.5</span> <span style="color:#e28964">%</span> <span style="color:#3387cc">2</span> <span style="color:#aeaeae;font-style:italic">// 1.5</span>
+</pre>
+					</section>
+					<section>
+						<p>Incrément (++)</p>
+						<pre style="background:#000;color:#f8f8f8">x<span style="color:#e28964">++</span> ou <span style="color:#e28964">++</span>x
+
+<span style="color:#aeaeae;font-style:italic">// Suffixe</span>
+<span style="color:#99cf50">var</span> x <span style="color:#e28964">=</span> <span style="color:#3387cc">3</span>;
+y <span style="color:#e28964">=</span> x<span style="color:#e28964">++</span>; <span style="color:#aeaeae;font-style:italic">// y = 3, x = 4</span>
+
+<span style="color:#aeaeae;font-style:italic">// Préfixe</span>
+<span style="color:#99cf50">var</span> a <span style="color:#e28964">=</span> <span style="color:#3387cc">2</span>;
+b <span style="color:#e28964">=</span> <span style="color:#e28964">++</span>a; <span style="color:#aeaeae;font-style:italic">// a = 3, b = 3</span>
+</pre>
+					</section>
+					<section>
+						<p>Décrément (--)</p>
+						<pre style="background:#000;color:#f8f8f8">x<span style="color:#e28964">--</span> ou <span style="color:#e28964">--</span>x
+
+<span style="color:#aeaeae;font-style:italic">// Suffixe</span>
+<span style="color:#99cf50">var</span> x <span style="color:#e28964">=</span> <span style="color:#3387cc">3</span>;
+y <span style="color:#e28964">=</span> x<span style="color:#e28964">--</span>; <span style="color:#aeaeae;font-style:italic">// y = 3, x = 2</span>
+
+<span style="color:#aeaeae;font-style:italic">// Préfixe</span>
+<span style="color:#99cf50">var</span> a <span style="color:#e28964">=</span> <span style="color:#3387cc">2</span>;
+b <span style="color:#e28964">=</span> <span style="color:#e28964">--</span>a; <span style="color:#aeaeae;font-style:italic">// a = 1, b = 1</span>
+</pre>
+					</section>
+					<section>
+						<p>Négation unaire (-)</p>
+						<pre style="background:#000;color:#f8f8f8"><span style="color:#e28964">-</span>x
+
+<span style="color:#99cf50">var</span> x <span style="color:#e28964">=</span> <span style="color:#3387cc">3</span>;
+y <span style="color:#e28964">=</span> <span style="color:#e28964">-</span>x; <span style="color:#aeaeae;font-style:italic">// y = -3, x = 3</span>
+</pre>
+					</section>
+					<section>
+						<p>Plus unaire (+)</p>
+						<pre style="background:#000;color:#f8f8f8"><span style="color:#e28964">+</span>x
+
+<span style="color:#e28964">+</span><span style="color:#3387cc">3</span>     <span style="color:#aeaeae;font-style:italic">// 3</span>
+<span style="color:#e28964">+</span><span style="color:#65b042">"3"</span>   <span style="color:#aeaeae;font-style:italic">// 3</span>
+<span style="color:#e28964">+</span><span style="color:#3387cc">true</span>  <span style="color:#aeaeae;font-style:italic">// 1</span>
+<span style="color:#e28964">+</span><span style="color:#3387cc">false</span> <span style="color:#aeaeae;font-style:italic">// 0</span>
+<span style="color:#e28964">+</span><span style="color:#3387cc">null</span>  <span style="color:#aeaeae;font-style:italic">// 0</span>
+</pre>
+					</section>
+					<section>
+						<h2>Opérateurs binaires</h2>
+					</section>
+					<section>
+						<h2>Opérateurs binaires</h2>
+						<p>& (ET binaire)</p>
+						<table class="standard-table">
+ <tbody>
+  <tr>
+   <td class="header">a</td>
+   <td class="header">b</td>
+   <td class="header">a & b</td>
+  </tr>
+  <tr>
+   <td>0</td>
+   <td>0</td>
+   <td>0</td>
+  </tr>
+  <tr>
+   <td>0</td>
+   <td>1</td>
+   <td>0</td>
+  </tr>
+  <tr>
+   <td>1</td>
+   <td>0</td>
+   <td>0</td>
+  </tr>
+  <tr>
+   <td>1</td>
+   <td>1</td>
+   <td>1</td>
+  </tr>
+ </tbody>
+</table>
+					</section>
+					<section>
+						<p>| (OU binaire)</p>
+						<table class="standard-table">
+ <tbody>
+  <tr>
+   <td class="header">a</td>
+   <td class="header">b</td>
+   <td class="header">a OU b</td>
+  </tr>
+  <tr>
+   <td>0</td>
+   <td>0</td>
+   <td>0</td>
+  </tr>
+  <tr>
+   <td>0</td>
+   <td>1</td>
+   <td>1</td>
+  </tr>
+  <tr>
+   <td>1</td>
+   <td>0</td>
+   <td>1</td>
+  </tr>
+  <tr>
+   <td>1</td>
+   <td>1</td>
+   <td>1</td>
+  </tr>
+ </tbody>
+</table>
+					</section>
+					<section>
+						<h2>Opérateurs logiques</h2>
+					</section>
+					<section>
+						<h2>Opérateurs logiques</h2>
+						<p>ET logique (&&)</p>
+						<pre style="background:#000;color:#f8f8f8">a1 <span style="color:#e28964">=</span> <span style="color:#3387cc">true</span>  <span style="color:#e28964">&amp;</span><span style="color:#e28964">&amp;</span> <span style="color:#3387cc">true</span>      <span style="color:#aeaeae;font-style:italic">// t &amp;&amp; t renvoie true</span>
+a2 <span style="color:#e28964">=</span> <span style="color:#3387cc">true</span>  <span style="color:#e28964">&amp;</span><span style="color:#e28964">&amp;</span> <span style="color:#3387cc">false</span>     <span style="color:#aeaeae;font-style:italic">// t &amp;&amp; f renvoie false</span>
+a3 <span style="color:#e28964">=</span> <span style="color:#3387cc">false</span> <span style="color:#e28964">&amp;</span><span style="color:#e28964">&amp;</span> <span style="color:#3387cc">true</span>      <span style="color:#aeaeae;font-style:italic">// f &amp;&amp; t renvoie false</span>
+a4 <span style="color:#e28964">=</span> <span style="color:#3387cc">false</span> <span style="color:#e28964">&amp;</span><span style="color:#e28964">&amp;</span> (<span style="color:#3387cc">3</span> <span style="color:#e28964">==</span> <span style="color:#3387cc">4</span>)  <span style="color:#aeaeae;font-style:italic">// f &amp;&amp; f renvoie false</span>
+a5 <span style="color:#e28964">=</span> <span style="color:#65b042">"Yip"</span> <span style="color:#e28964">&amp;</span><span style="color:#e28964">&amp;</span> <span style="color:#65b042">"Yop"</span>     <span style="color:#aeaeae;font-style:italic">// t &amp;&amp; t renvoie "Yop"</span>
+a6 <span style="color:#e28964">=</span> <span style="color:#3387cc">false</span> <span style="color:#e28964">&amp;</span><span style="color:#e28964">&amp;</span> <span style="color:#65b042">"Yop"</span>     <span style="color:#aeaeae;font-style:italic">// f &amp;&amp; t renvoie false</span>
+a7 <span style="color:#e28964">=</span> <span style="color:#65b042">"Yop"</span> <span style="color:#e28964">&amp;</span><span style="color:#e28964">&amp;</span> <span style="color:#3387cc">false</span>     <span style="color:#aeaeae;font-style:italic">// t &amp;&amp; f renvoie false</span>
+</pre>
+					</section>
+					<section>
+						<p>OU logique (||)</p>
+						<pre style="background:#000;color:#f8f8f8">o1 <span style="color:#e28964">=</span> <span style="color:#3387cc">true</span>  <span style="color:#e28964">||</span> <span style="color:#3387cc">true</span>       <span style="color:#aeaeae;font-style:italic">// t || t renvoie true</span>
+o2 <span style="color:#e28964">=</span> <span style="color:#3387cc">false</span> <span style="color:#e28964">||</span> <span style="color:#3387cc">true</span>       <span style="color:#aeaeae;font-style:italic">// f || t renvoie true</span>
+o3 <span style="color:#e28964">=</span> <span style="color:#3387cc">true</span>  <span style="color:#e28964">||</span> <span style="color:#3387cc">false</span>      <span style="color:#aeaeae;font-style:italic">// t || f renvoie true</span>
+o4 <span style="color:#e28964">=</span> <span style="color:#3387cc">false</span> <span style="color:#e28964">||</span> (<span style="color:#3387cc">3</span> <span style="color:#e28964">==</span> <span style="color:#3387cc">4</span>)   <span style="color:#aeaeae;font-style:italic">// f || f renvoie false</span>
+o5 <span style="color:#e28964">=</span> <span style="color:#65b042">"Yip"</span> <span style="color:#e28964">||</span> <span style="color:#65b042">"Yop"</span>      <span style="color:#aeaeae;font-style:italic">// t || t renvoie "Yip"</span>
+o6 <span style="color:#e28964">=</span> <span style="color:#3387cc">false</span> <span style="color:#e28964">||</span> <span style="color:#65b042">"Yip"</span>      <span style="color:#aeaeae;font-style:italic">// f || t renvoie "Yip"</span>
+o7 <span style="color:#e28964">=</span> <span style="color:#65b042">"Yip"</span> <span style="color:#e28964">||</span> <span style="color:#3387cc">false</span>      <span style="color:#aeaeae;font-style:italic">// t || f renvoie "Yip"</span>
+</pre>
+					</section>
+					<section>
+						<p>NON logique(!)</p>
+						<pre style="background:#000;color:#f8f8f8">n1 <span style="color:#e28964">=</span> <span style="color:#e28964">!</span><span style="color:#3387cc">true</span>              <span style="color:#aeaeae;font-style:italic">// !t renvoie false</span>
+n2 <span style="color:#e28964">=</span> <span style="color:#e28964">!</span><span style="color:#3387cc">false</span>             <span style="color:#aeaeae;font-style:italic">// !f renvoie true</span>
+n3 <span style="color:#e28964">=</span> <span style="color:#e28964">!</span><span style="color:#65b042">"Yop"</span>             <span style="color:#aeaeae;font-style:italic">// !t renvoie false</span>
+</pre>
+					</section>
+					<section>
+						<h2>Opérateurs de chaînes de caractères</h2>
+					</section>
+					<section>
+						<h2>Opérateurs de chaînes de caractères</h2>
+						<pre style="background:#000;color:#f8f8f8"><span style="text-decoration:underline">console</span><span style="color:#dad085">.log</span>(<span style="color:#65b042">"ma "</span> <span style="color:#e28964">+</span> <span style="color:#65b042">"chaîne"</span>); <span style="color:#aeaeae;font-style:italic">// affichera "ma chaîne" dans la console</span>
+
+<span style="color:#99cf50">var</span> maChaîne <span style="color:#e28964">=</span> <span style="color:#65b042">"alpha"</span>;
+maChaîne <span style="color:#e28964">+</span><span style="color:#e28964">=</span> <span style="color:#65b042">"bet"</span>; <span style="color:#aeaeae;font-style:italic">// l'expression sera évaluée en "alphabet"</span>
+                   <span style="color:#aeaeae;font-style:italic">// et cette valeur sera affectée à maChaîne</span>
+</pre>
+					</section>
+					<section>
+						<h2>Opérateur conditionnel ternaire</h2>
+					</section>
+					<section>
+						<h2>Opérateur conditionnel ternaire</h2>
+						<pre style="background:#000;color:#f8f8f8">condition ? val1 : val2
+
+<span style="color:#99cf50">var</span> statut <span style="color:#e28964">=</span> (âge <span style="color:#e28964">>=</span> <span style="color:#3387cc">18</span>) ? <span style="color:#65b042">"adulte"</span> : <span style="color:#65b042">"mineur"</span>;
+</pre>
+					</section>
+					<section>
+						<h2>La virgule comme opérateur</h2>
+					</section>
+					<section>
+						<h2>La virgule comme opérateur</h2>
+						<pre style="background:#000;color:#f8f8f8"><span style="color:#e28964">for</span> (<span style="color:#99cf50">var</span> i <span style="color:#e28964">=</span> <span style="color:#3387cc">0</span>, j <span style="color:#e28964">=</span> <span style="color:#3387cc">9</span>; i <span style="color:#e28964">&lt;=</span> j; i<span style="color:#e28964">++</span>, j<span style="color:#e28964">--</span>)
+</pre>
+					</section>
+					<section>
+						<h2>Opérateurs unaires</h2>
+					</section>
+					<section>
+						<h2>Opérateurs unaires</h2>
+						<pre style="background:#000;color:#f8f8f8"><span style="color:#99cf50">var</span> arbres <span style="color:#e28964">=</span> <span style="color:#e28964">new</span> <span style="text-decoration:underline">Array</span>(<span style="color:#65b042">"sequoia"</span>, <span style="color:#65b042">"laurier"</span>, <span style="color:#65b042">"cèdre"</span>, <span style="color:#65b042">"chêne"</span>, <span style="color:#65b042">"érable"</span>);
+<span style="color:#e28964">delete</span> arbres[<span style="color:#3387cc">3</span>];
+<span style="color:#e28964">if</span> (<span style="color:#3387cc">3</span> <span style="color:#e28964">in</span> arbres) {
+  <span style="color:#aeaeae;font-style:italic">// Ceci ne sera pas exécuté</span>
+}
+</pre>
+<pre style="background:#000;color:#f8f8f8"><span style="color:#e28964">typeof</span> opérande
+
+<span style="color:#e28964">typeof</span> (opérande)
+</pre>
+					</section>
+					<section>
+						<h2>Opérateurs relationnels</h2>
+					</section>
+					<section>
+						<h2>Opérateurs relationnels</h2>
+						<pre style="background:#000;color:#f8f8f8">nomOuNumeroPropriete <span style="color:#e28964">in</span> monObjet
+
+<span style="color:#65b042">"fabricant"</span> <span style="color:#e28964">in</span> maVoiture; <span style="color:#aeaeae;font-style:italic">// renvoie true</span>
+<span style="color:#65b042">"modèle"</span> <span style="color:#e28964">in</span> maVoiture;    <span style="color:#aeaeae;font-style:italic">// renvoie true</span>
+</pre>
+					</section>
+				</section>
+				<section>
+					<h2>ECMAScript 6 (2015) et les variables</h2>
+					<p>La nouvelle version de JavaScript a apporté sont lot de déclaration de variable</p>
+				</section>
+				<section>
+					<h2>Déclarer une variable avec const</h2>
+					<pre style="background:#000;color:#f8f8f8"><span style="color:#99cf50">function</span> <span style="color:#89bdff">fn</span>() {
+  <span style="color:#99cf50">const</span> foo <span style="color:#e28964">=</span> <span style="color:#65b042">"bar"</span>
+  <span style="color:#e28964">if</span> (<span style="color:#3387cc">true</span>) {
+    <span style="color:#99cf50">const</span> foo <span style="color:#aeaeae;font-style:italic">// SyntaxError, la variable a besoin d'être assignée</span>
+    <span style="color:#99cf50">const</span> foo <span style="color:#e28964">=</span> <span style="color:#65b042">"qux"</span>
+    foo <span style="color:#e28964">=</span> <span style="color:#65b042">"norf"</span> <span style="color:#aeaeae;font-style:italic">// SyntaxError, la variable ne peut pas être réassignée</span>
+    <span style="text-decoration:underline">console</span><span style="color:#dad085">.log</span>(foo)
+    <span style="color:#aeaeae;font-style:italic">// "qux", la variable appartient au scope de son bloc (le "if")</span>
+  }
+  <span style="text-decoration:underline">console</span><span style="color:#dad085">.log</span>(foo)
+  <span style="color:#aeaeae;font-style:italic">// "bar", la variable appartient au scope de la fonction "fn"</span>
+}
+</pre>
+<small>source du code : putaindecode.io</small>
+				</section>
+				<section>
+					<h2>Déclarer une variable avec const</h2>
+					<img data-src="img/const.jpg" alt="variable const" width="600px" />
+				</section>
+				<section>
+					<h2>Portée de const</h2>
+					<img data-src="img/const-cc.jpg" alt="variable const" />
+				</section>
+				<section>
+					<h2>Portée de const</h2>
+					<img data-src="img/const-cc2.jpg" alt="variable const" />
+				</section>
+				<section>
+					<h2>let moi faire...</h2>
+					<p>Déclarer sa variable avec let</p>
+					<pre style="background:#000;color:#f8f8f8"><span style="color:#99cf50">function</span> <span style="color:#89bdff">fn</span>() {
+  let foo <span style="color:#e28964">=</span> <span style="color:#65b042">"bar"</span>
+  <span style="color:#99cf50">var</span> foo2 <span style="color:#e28964">=</span> <span style="color:#65b042">"bar"</span>
+  <span style="color:#e28964">if</span> (<span style="color:#3387cc">true</span>) {
+    let foo <span style="color:#aeaeae;font-style:italic">// pas d'erreur, foo === undefined</span>
+    <span style="color:#99cf50">var</span> foo2
+    <span style="color:#aeaeae;font-style:italic">// Attention, les déclarations "var" ne sont pas scopées
+    // au niveau bloc</span>
+    <span style="color:#aeaeae;font-style:italic">// foo2 est en réalité écrasé !</span>
+    foo <span style="color:#e28964">=</span> <span style="color:#65b042">"qux"</span>
+    foo2 <span style="color:#e28964">=</span> <span style="color:#65b042">"qux"</span>
+    <span style="text-decoration:underline">console</span><span style="color:#dad085">.log</span>(foo)
+    <span style="color:#aeaeae;font-style:italic">// "qux", la variable appartient au scope de son blocs (le "if")</span>
+    <span style="text-decoration:underline">console</span><span style="color:#dad085">.log</span>(foo2)
+    <span style="color:#aeaeae;font-style:italic">// "qux"</span>
+  }
+  <span style="text-decoration:underline">console</span><span style="color:#dad085">.log</span>(foo)
+  <span style="color:#aeaeae;font-style:italic">// "bar", la variable appartient au scope de son bloc
+  // (la fonction "fn")</span>
+  <span style="text-decoration:underline">console</span><span style="color:#dad085">.log</span>(foo2)
+  <span style="color:#aeaeae;font-style:italic">// "qux"</span>
+}
+</pre>
+				</section>
+				<section>
+					<h2>Portée de let</h2>
+					<img data-src="img/let.jpg" alt="variable let" />
+				</section>
+				<section>
+					<h2>UFC-Que choisir ?</h2>
+					<p>On pourrait croire que le choix est difficile, que neni</p>
+					<ul>
+						<li>Utilisez une déclaration par const (99% du temps, c’est le bon choix)</li>
+						<li>Si au fil de votre code vous changez sa valeur, modifiez pour un let (1%)</li>
+						<li>Si vous avez trouvé le pire cas d’utilisation du monde, changez pour un var (je vous laisse faire le calcul)</li>
+					</ul>
+					<small>source : putaindecode.io (et alors ? c'est un bon site)</small>
+				</section>
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
