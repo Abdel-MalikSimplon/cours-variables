@@ -41,10 +41,10 @@
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
 				<section>
-					<h1>Les Variables</h1>
-					<h3>Un monde passionnant et parfois complèxe</h3>
+					<h1>Variables <br />& <br />opérateurs</h1>
+					<h3>Un monde passionnant et parfois complexe</h3>
 					<p>
-						<small>Pour <a href="http://hakim.se">SimplonMars</a> / <a href="http://twitter.com/hakimel">Ecole Centrale Marseille</a></small>
+						<small>Pour <a href="http://www.simplonmars.eu/">SimplonMars</a> / <a href="https://www.centrale-marseille.fr/fr/simplonmars">Ecole Centrale Marseille</a></small>
 					</p>
 				</section>
 
@@ -59,11 +59,11 @@
 				<section>
 					<section>
 					<h2>Comment définir le nom d'une variable ?</h2>
-					<p>La création d'une variable passe par 4 phases :</p>
+					<p>La création d'une variable déclenche plusieurs opérations :</p>
 						<ol style="margin: auto;">
 							<li class="fragment">Créer et mémoriser un nom de variable</li>
-							<li class="fragment">Lui attribué un type</li>
-							<li class="fragment">Créer et mémorisé une valeur</li>
+							<li class="fragment">Lui attribué implicitement un type</li>
+							<li class="fragment">Créer et "mémoriser" une valeur</li>
 							<li class="fragment">Etablir un lien entre le nom de la variable et l'emplacement mémoire</li>
 						</ol>
 					</section>
@@ -90,7 +90,7 @@
 						<img data-src="img/type.jpg" />
 				</section>
 				<section>
-					<h2>Créer et mémorisé une valeur</h2>
+					<h2>Créer et mémoriser une valeur</h2>
 						<img data-src="img/valeur-variable.jpg" />
 				</section>
 				<section>
@@ -99,7 +99,7 @@
 				</section>
 				<section>
 					<section>
-						<h2>Création de variable dans d'autre langage</h2>
+						<h2>Création de variable dans d'autres langages</h2>
 						<p>En JAVA</p>
 						<pre style="background:#000;color:#f8f8f8"><span style="color:#99cf50">float</span> pi = <span style="color:#3387cc">3.141f</span>;
 	</pre>
@@ -132,19 +132,19 @@
 					</section>
 				</section>
 				<section>
-				<h2>Règle de nommage</h2>
+				<h2>Règles de nommage</h2>
 					<ol style="margin: auto;">
-						<li class="fragment">Un nom de variable est une séquence de lettres (a -> z ; A -> Z) et de chiffre (0 -> 9). </li>
-						<li class="fragment">Le nom de la variable doit toujours commencer par une lettre minuscule.</li>
-						<li class="fragment">Les lettres accentuées, les cédilles, les espaces, les caractères spéciaux, sont interdits (exception pour le _underscore).</li>
+						<li class="fragment">Un nom de variable est une séquence de lettres (a -> z ; A -> Z) et de chiffre (0 -> 9) ou underscore ( _ ). </li>
+						<li class="fragment">Le nom de la variable doit toujours commencer par une lettre minuscule (la majuscule peut être utilisée par convention pour les classes).</li>
+						<li class="fragment">Les lettres accentuées, les cédilles, les espaces, les caractères spéciaux, sont à éviter très fortement (exception pour le _underscore).</li>
 					</ol>
 				</section>
 				<section>
 				<h2>Convention de nommage</h2>
-				<p>Il existe des conventions de nommage pour les variables. Deux d'entres-elles sont les plus connus et les plus utilisées.</p>
+				<p>Il existe des conventions de nommage pour les variables. Deux d'entres-elles sont les plus connues et les plus utilisées.</p>
 					<ol style="margin: auto;">
 						<li class="fragment">La première est le camelCase (casse de chameau)</li>
-						<li class="fragment">_Underscore. </li>
+						<li class="fragment">ma_variable (moins utiliser en JavaScript). </li>
 					</ol>
 				</section>
 				<section>
@@ -166,21 +166,21 @@
 				<p>Ne négligez pas le choix du nom de votre variable, c'est très important.</p>
 				<pre style="background:#000;color:#f8f8f8"><span style="color:#99cf50">var</span> nom; <span style="color:#aeaeae;font-style:italic">// C'est un bon nom de variable</span>
 
-<span style="color:#99cf50">var</span> x; <span style="color:#aeaeae;font-style:italic">// A évité !!</span>
+<span style="color:#99cf50">var</span> x; <span style="color:#aeaeae;font-style:italic">// A éviter !!</span>
 </pre>
 				</section>
 				<section>
 					<h2>Affectation multiple</h2>
-					<p>Une des grandes force des langage de programmation, c'est qu'il est possible d'affecté des valeurs à plusieurs variables en même temps</p>
+					<p>Une des grandes forces des langages de programmation, c'est qu'il est possible d'affecter des valeurs à plusieurs variables en même temps</p>
 					<pre style="background:#000;color:#f8f8f8"><span style="color:#99cf50">var</span> voiture <span style="color:#e28964">=</span> <span style="color:#65b042">"Ford"</span>,
     annee <span style="color:#e28964">=</span> <span style="color:#3387cc">1969</span>,
-    permis <span style="color:#e28964">=</span> <span style="color:#65b042">"non"</span>;
+    permis <span style="color:#e28964">=</span> <span style="color:#65b042">false</span>;
 </pre>
 				</section>
 				<section>
 					<section>
 						<h2>Les noms de variable réservés</h2>
-						<p>Il existe des mots réservés, déjà utiliser par le langage, tachez de ne pas les utiliser.<br /><span><small>Par exemple:</small></span></p>
+						<p>Il existe des mots réservés déjà utiliser par le langage, tachez de ne pas les utiliser.<br /><span><small>Par exemple:</small></span></p>
 						<pre style="background:#000;color:#f8f8f8"><span style="color:#dad085">alert</span>() <span style="color:#aeaeae;font-style:italic">// affiche une boite de dialogue à l'écran. </span>
 
 Exemple : <span style="color:#dad085">alert</span>(<span style="color:#65b042">"Bonjour SimplonMars !"</span>);
@@ -213,8 +213,8 @@ Exemple : <span style="color:#dad085">alert</span>(<span style="color:#65b042">"
 
 				</section>
 				<section>
-					<h2>Attribué une valeur à la variable</h2>
-					<p>Pour rester dans l'analogie de la boite, on va devoir remplir la boite. Cette étape s'appelle l'affectation. </p>
+					<h2>Attribuer une valeur à la variable</h2>
+					<p>Pour rester dans l'analogie de la boîte, on va devoir remplir la boite. Cette étape s'appelle l'affectation. </p>
 					<img data-src="img/boite-variable-deux.png" alt="seconde boite de variable" style="background-color: transparent; border: none; box-shadow: none"/>
 				</section>
 				<section>
@@ -277,7 +277,7 @@ Exemple : <span style="color:#dad085">alert</span>(<span style="color:#65b042">"
 						<pre style="background:#000;color:#f8f8f8"><span style="color:#aeaeae;font-style:italic">// On créer une variable btn qui va contenir l'ID #btn</span>
 <span style="color:#aeaeae;font-style:italic">// De cette façon on économisera du code</span>
 
-<span style="color:#99cf50">var</span> btn <span style="color:#e28964">=</span> <span style="color:#9b859d">document</span>.<span style="color:#dad085">getElementById</span>(<span style="color:#65b042">'#btn'</span>);
+<span style="color:#99cf50">var</span> btn <span style="color:#e28964">=</span> <span style="color:#9b859d">document</span>.<span style="color:#dad085">getElementById</span>(<span style="color:#65b042">'btn'</span>);
     btn.addEventListener(<span style="color:#65b042">'click'</span>, <span style="color:#99cf50">function</span>(){
         <span style="color:#dad085">alert</span>(<span style="color:#65b042">'Tu as cliqué avec JavaScript !'</span>);
     })
@@ -292,12 +292,12 @@ Exemple : <span style="color:#dad085">alert</span>(<span style="color:#65b042">"
 				</section>
 				<section>
 					<h2>Confondre nom de variable et contenu</h2>
-					<p>Une erreur qui arrive fréquemment lorsque l'on débute, c'est de confondre le nom de la variable et son contenue. </p>
+					<p>Une erreur qui arrive fréquemment lorsque l'on débute, c'est de confondre le nom de la variable et son contenu. </p>
 					<pre style="background:#000;color:#f8f8f8"><span style="color:#99cf50">var</span> boite <span style="color:#e28964">=</span> contenu;
 
 <span style="color:#99cf50">var</span> nom &larr; <span style="color:#65b042">"Simplon"</span>;
 </pre>
-				<p><small>Le signe = en programmation n'est pas un signe d'égalité comme en mathématique, mais un signe d'affectation.</small></p>
+				<p style="font-size: .9em;">Le signe = en programmation n'est pas un signe d'égalité comme en mathématique, mais un signe d'affectation.</p>
 				</section>
 				<section>
 					<section>
@@ -727,7 +727,7 @@ maChaîne <span style="color:#e28964">+</span><span style="color:#e28964">=</spa
 				</section>
 				<section>
 					<h2>ECMAScript 6 (2015) et les variables</h2>
-					<p>La nouvelle version de JavaScript a apporté sont lot de déclaration de variable</p>
+					<p>La nouvelle version de JavaScript a apporté sont lot de déclarations de variable</p>
 				</section>
 				<section>
 					<h2>Déclarer une variable avec const</h2>
@@ -798,6 +798,16 @@ maChaîne <span style="color:#e28964">+</span><span style="color:#e28964">=</spa
 						<li>Si vous avez trouvé le pire cas d’utilisation du monde, changez pour un var (je vous laisse faire le calcul)</li>
 					</ul>
 					<small>source : putaindecode.io (et alors ? c'est un bon site)</small>
+				</section>
+				<section>
+					<p>Sources : </p>
+					<ul>
+						<li style="font-size: .8em;"><b>Apprendre à programmer avec Python 3</b> - de Gérard Swinnen</li>
+						<li style="font-size: .8em;"><b>Algorithmique et programmation pour non-matheux</b> - de Christophe Darmangeat</li>
+						<li style="font-size: .8em;"><b>MDN JavaScript</b> - de Mozilla</li>
+						<li style="font-size: .8em;"><b>Calendrier de l'avent 2015</b> - putaindecode.io</li>
+					</ul>
+					<p style="font-size: .8em;">Merci à <a href="https://github.com/silently">Guillaume Denis</a> pour sa relecture et sa correction</p>
 				</section>
 			</div>
 
